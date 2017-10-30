@@ -23,9 +23,8 @@ def nakresli_mapu(souradnice,ovoce):
 
 def pohyb(souradnice,strana,ovoce):
     "Funkce přidá k seznamu poslední bod posunutý v daném směru"
-    delka=len(souradnice)
-    x=((souradnice[delka-1])[0])
-    y=((souradnice[delka-1])[1])
+    x=((souradnice[-1])[0])
+    y=((souradnice[-1])[1])
     if strana=="v":
         souradnice.append((x,y+1))
     elif strana=="j":
@@ -35,7 +34,7 @@ def pohyb(souradnice,strana,ovoce):
     else:
         souradnice.append((x-1,y))
     #Vyhodnocení ovoce
-    if souradnice[delka-1]==ovoce:                #Had vyroste a vytvoří se nové ovoce
+    if souradnice[-1] in ovoce:                #Had vyroste a vytvoří se nové ovoce
         while True:
             m=randrange(0,11)
             n=randrange(0,11)
