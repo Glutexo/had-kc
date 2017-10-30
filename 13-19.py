@@ -26,9 +26,9 @@ def pohyb(souradnice,strana,ovoce):
     x=((souradnice[-1])[0])
     y=((souradnice[-1])[1])
     if strana=="v":
-        souradnice.append((x,y+1))
-    elif strana=="j":
         souradnice.append((x+1,y))
+    elif strana=="j":
+        souradnice.append((x,y+1))
     elif strana=="s":
         souradnice.append((x,y-1))
     else:
