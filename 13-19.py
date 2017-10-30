@@ -36,10 +36,10 @@ def pohyb(souradnice,strana,ovoce):
     #Vyhodnocení ovoce
     if souradnice[-1] in ovoce:                #Had vyroste a vytvoří se nové ovoce
         while True:
-            m=randrange(0,11)
-            n=randrange(0,11)
             ovoce=[(m,n)]
             if ovoce not in souradnice:
+            m=randrange(0,10)
+            n=randrange(0,10)
                 break
     else:                                                   #Had se zkrátí
         del souradnice[0]
