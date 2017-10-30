@@ -40,7 +40,7 @@ def pohyb(souradnice,strana,ovoce):
             n=randrange(0,10)
             del ovoce[0]
             ovoce.append((m,n))
-            if ovoce not in souradnice:
+            if ovoce[0] not in souradnice:
                 break
     else:                                                   #Had se zkrátí
         del souradnice[0]
