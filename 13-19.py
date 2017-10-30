@@ -59,6 +59,6 @@ def pohyb(souradnice,strana,ovoce):
 ovoce=[(2,3)]                                   #Počáteční ovoce a souřadnice.
 souradnice=[(0,0),(1,0),(2,0)]
 while True:
+    nakresli_mapu(souradnice,ovoce)
     strana=input("Na jakou stranu chceš hrát?(s,j,v,z):")
     pohyb(souradnice,strana,ovoce)
-    nakresli_mapu(souradnice,ovoce)
