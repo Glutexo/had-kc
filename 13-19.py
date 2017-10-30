@@ -34,15 +34,26 @@ def pohyb(souradnice,strana,ovoce):
     else:
         souradnice.append((x-1,y))
     #Vyhodnocení ovoce
-    if souradnice[-1] in ovoce:                #Had vyroste a vytvoří se nové ovoce
+
+    sezrano = False
+    for i in range(len(ovoce)):
+        if souradnice[-1] != ovoce[i]:
+            # Toto ovoce had nesežral.
+            continue
+
+        # Toto ovoce had sežral, odstraníme ho.
+        # Had vyroste a vytvoří se nové ovoce.
+        del ovoce[i]
+        sezrano = True
+
         while True:
             m=randrange(0,10)
             n=randrange(0,10)
-            del ovoce[0]
-            ovoce.append((m,n))
-            if ovoce[0] not in souradnice:
+            if (m,n) not in souradnice:
+                ovoce.append((m,n))
                 break
-    else:                                                   #Had se zkrátí
+
+    if not sezrano:                                                   #Had se zkrátí
         del souradnice[0]
 
 ovoce=[(2,3)]                                   #Počáteční ovoce a souřadnice.
