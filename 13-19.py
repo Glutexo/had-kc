@@ -14,7 +14,7 @@ def nakresli_mapu(souradnice,ovoce):
         (tabulka[y])[x]="X"
     #Doplnění ? (ovoce) dle souřadnic
     for m,n in ovoce:
-        (tabulka[y])[x]="?"
+        (tabulka[n])[m]="?"
     #Vypsání tabulky
     for radek in tabulka:
         for tecka in radek:
